@@ -40,7 +40,7 @@ class LinkedList {
             p1 = p1.next;
             p2 = p2.next;
         }
-        while(p1){
+        while (p1) {
             let sum = (+p1.val) + (+carry);
             sum += "";
             const node = new ListNode();
@@ -56,7 +56,7 @@ class LinkedList {
             current = current.next;
             p1 = p1.next;
         }
-        while(p2){
+        while (p2) {
             let sum = (+p2.val) + (+carry);
             sum += "";
             const node = new ListNode();
@@ -72,7 +72,7 @@ class LinkedList {
             current = current.next;
             p2 = p2.next;
         }
-        if(carry!=0){
+        if (carry != 0) {
             const node = new ListNode();
             node.val = carry;
             current.next = node;
@@ -84,19 +84,18 @@ class LinkedList {
         //     c = c.next
         // }
     }
+    maximumElementAfterDecrementingAndRearranging(arr) {
+        arr.sort((a, b) => a - b);
+        arr[0] = 1;
+        for (let i = 0; i < arr.length - 1; i++) {
+            if ((arr[i + 1] - arr[i]) > 1) {
+                arr[i + 1] = arr[i] + 1;
+            }
+        }
+        console.log(arr[arr.length - 1]);
+    };
 
 }
 const LinkedMethods = new LinkedList();
-const l1 = {
-    val:2,next:{
-        val:9,next:{
-            val:9,next:{
-                val:9,next:null
-            }
-        }
-    }
-}
-const l2 = {
-    val:9,next:null
-}
-LinkedMethods.AddTwoNumbers(l1,l2)
+
+LinkedMethods.maximumElementAfterDecrementingAndRearranging([1000,1,100])
