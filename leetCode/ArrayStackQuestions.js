@@ -1,6 +1,6 @@
 
 
-class ArrayStack {
+class ArrayString {
     constructor() { }
 
     maximumElementAfterDecrementingAndRearranging(arr) {
@@ -15,6 +15,6 @@ class ArrayStack {
     };
 
 }
-const ArrayStackMethods = new ArrayStack();
+const ArrayStringMethods = new ArrayString();
 
-console.log(ArrayStackMethods.findDifferentBinaryString(["111", "001", "000"]));
+console.log(ArrayStringMethods.findDifferentBinaryString(["111", "001", "000"]));
