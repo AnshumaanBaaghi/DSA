@@ -60,6 +60,7 @@ function runProgram(input) {
 const maze = (n, grid, row, col, str, ans, memo) => {
   if (row == n - 1 && col == n - 1) {
     grid[row][col] == 1 && ans.push(str);
+    console.log("grid:", grid);
     return ans;
   }
 
@@ -83,13 +84,13 @@ const maze = (n, grid, row, col, str, ans, memo) => {
   return ans;
 };
 
-// Example usage
 const n = 4;
 const grid = [
   [1, 0, 0, 0],
   [1, 1, 0, 1],
   [1, 1, 0, 0],
-  [0, 1, 1, 1]];
+  [0, 1, 1, 1],
+];
 const row = 0;
 const col = 0;
 const str = "";
