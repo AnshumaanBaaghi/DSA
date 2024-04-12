@@ -2,11 +2,7 @@ let fs = require("fs");
 
 let input = fs.readFileSync(0, "utf8");
 
-// console.log(input)
-
 const tokens = input.split("/");
-
-// console.log("tokens",tokens)
 
 const stack = [];
 
