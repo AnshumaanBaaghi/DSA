@@ -5,7 +5,7 @@ function runProgram(input) {
 
   let low = Math.max(...arr);
   let high = arr.reduce((ac, el) => ac + el, 0);
-  //   console.log(high)
+  console.log(high);
   let ans = -1;
 
   while (low <= high) {
